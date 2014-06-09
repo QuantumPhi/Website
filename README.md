@@ -1,4 +1,4 @@
 Website
 =======
 
-My website.
+[LICENSE](LICENSE.md)
