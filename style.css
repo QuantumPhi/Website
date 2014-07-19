@@ -1,7 +1,8 @@
 #intro
 {
     position: relative;
-    font-type: 'Questrial', sans-serif;
+    font-family: 'Questrial', sans-serif;
     font-size: 40px;
+    text-align: center;
     height: 90%;
 }
