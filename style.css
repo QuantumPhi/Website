@@ -2,11 +2,13 @@ html, body
 {
     margin: 0;
     padding: 0;
+    height: 100%;
 }
 
-#intro
+section#intro
 {
-    position: fixed;
+    position: relative;
+    overflow: hidden;
     background-color: #000000;
     font-family: 'Questrial', sans-serif;
     font-size: 60px;
@@ -20,7 +22,7 @@ p#name
     position: relative;
     color: #ecf0f1;
     margin-top: 20%;
-    
+
     -webkit-animation: fadein 1.5s;
        -moz-animation: fadein 1.5s;
         -ms-animation: fadein 1.5s;
