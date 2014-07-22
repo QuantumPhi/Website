@@ -21,7 +21,7 @@ p#name
 {
     position: relative;
     color: #ecf0f1;
-    margin-top: 20%;
+    /*Replace margin-top*/
 
     -webkit-animation: fadein 1.5s;
        -moz-animation: fadein 1.5s;
@@ -34,12 +34,18 @@ img#downanim
 {
     position: relative;
     width: 2%;
-    margin-top: 11.5%;
+    /*Replace margin-top*/
+
+    -webkit-transition: all 0.75s ease-out;
+       -moz-transition: all 0.75s ease-out;
+        -ms-transition: all 0.75s ease-out;
+         -o-transition: all 0.75s ease-out;
+            transition: all 0.75s ease-out;
 }
 
 img#downanim:hover
 {
-    margin-top: 13%;
+    /*Replace margin-top*/
     color: #ecf0f1;
 
     -webkit-transition: all 0.75s ease-out;
@@ -51,30 +57,35 @@ img#downanim:hover
 
 @keyframes fadein
 {
+    /*Replace margin-top*/
     from { opacity: 0; margin-top: 21.5%; }
     to { opacity: 1; margin-top: 20%; }
 }
 
 @-moz-keyframes fadein
 {
+    /*Replace margin-top*/
     from { opacity: 0; margin-top: 21.5%; }
     to { opacity: 1; margin-top: 20%; }
 }
 
 @-webkit-keyframes fadein
 {
+    /*Replace margin-top*/
     from { opacity: 0; margin-top: 21.5%; }
     to { opacity: 1; margin-top: 20%; }
 }
 
 @-ms-keyframes fadein
 {
+    /*Replace margin-top*/
     from { opacity: 0; margin-top: 21.5%; }
     to { opacity: 1; margin-top: 20%; }
 }​
 
 @-o-keyframes fadein
 {
+    /*Replace margin-top*/
     from { opacity: 0; margin-top: 21.5%; }
     to { opacity: 1; margin-top: 20%; }
 }​
