@@ -30,28 +30,50 @@ p#name
             animation: fadein 1.5s;
 }
 
+img#downanim
+{
+    position: relative;
+    width: 2.5%;
+    top: 90%;
+
+    -webkit-transition: all 1s ease-out;
+       -moz-transition: all 1s ease-out;
+        -ms-transition: all 1s ease-out;
+         -o-transition: all 1s ease-out;
+            transition: all 1s ease-out;
+}
+
+img#downanim:hover
+{
+    top: 95%;
+}
+
 @keyframes fadein
 {
     from { opacity: 0; margin-top: 21.5%; }
     to { opacity: 1; margin-top: 20%; }
 }
 
-@-moz-keyframes fadein {
+@-moz-keyframes fadein
+{
     from { opacity: 0; margin-top: 21.5%; }
     to { opacity: 1; margin-top: 20%; }
 }
 
-@-webkit-keyframes fadein {
+@-webkit-keyframes fadein
+{
     from { opacity: 0; margin-top: 21.5%; }
     to { opacity: 1; margin-top: 20%; }
 }
 
-@-ms-keyframes fadein {
+@-ms-keyframes fadein
+{
     from { opacity: 0; margin-top: 21.5%; }
     to { opacity: 1; margin-top: 20%; }
 }​
 
-@-o-keyframes fadein {
+@-o-keyframes fadein
+{
     from { opacity: 0; margin-top: 21.5%; }
     to { opacity: 1; margin-top: 20%; }
 }​
