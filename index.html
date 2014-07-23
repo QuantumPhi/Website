@@ -4,13 +4,38 @@
     <link href='http://fonts.googleapis.com/css?family=Questrial' rel='stylesheet'>
     <link href='style.css' rel='stylesheet'>
     <title>Tarik Onalan</title>
+
+    <script src='js/smooth-scroll.min.js'></script>
 </head>
 <body>
     <section id='intro'>
+        <svg xmlns='http://www.w3.org/2000/svg' id='fractal'></svg>
         <p id='name'>Tarik Onalan</p>
-        <a href='#about' class='icon-container'>
-            <img src='res/downarrow.png' class='transition'></i>
+        <a data-scroll href='#about' class='icon-container'>
+            <img src='res/downarrow.png' class='transition'></img>
         </a>
     </section>
+
+    <section id='about'>
+
+    </section>
+
+    <script>
+        function setWidthHeight() {
+            var obj = document.querySelectorAll('.icon-container');
+            obj[0].style.width = window.innerWidth * 0.03 + 'px';
+            obj[0].style.height = obj[0].style.width;
+        };
+        setWidthHeight();
+
+        smoothScroll.init({
+            speed: 750,
+            easing: 'easeInOutCubic',
+            updateURL: true,
+            offset: 0,
+            callbackBefore: function ( toggle, anchor ) {},
+            callbackAfter: function ( toggle, anchor ) {}
+        });
+    </script>
 </body>
 </html>
