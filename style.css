@@ -21,6 +21,18 @@ p
             transform: translate(-50%, -50%);
 }
 
+svg#fractal {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left: -7.5%;
+}
+
+svg path.dragon {
+    stroke: #2ecc71;
+    stroke-width: 2;
+}
+
 section#intro
 {
     position: relative;

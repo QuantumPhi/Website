@@ -6,10 +6,13 @@
     <title>Tarik Onalan</title>
 
     <script src='js/smooth-scroll.min.js'></script>
+    <script src='js/dragon.js'></script>
 </head>
 <body>
     <section id='intro'>
-        <svg xmlns='http://www.w3.org/2000/svg' id='fractal'></svg>
+        <div>
+           <svg xmlns='http://www.w3.org/2000/svg' id='fractal'></svg>
+        </div>
         <p id='name'>Tarik Onalan</p>
         <a data-scroll href='#about' class='icon-container'>
             <img src='res/downarrow.png' class='transition'></img>
@@ -36,6 +39,8 @@
             callbackBefore: function ( toggle, anchor ) {},
             callbackAfter: function ( toggle, anchor ) {}
         });
+
+        DRAGON.fractal('fractal', [300,window.innerHeight / 2], [window.innerWidth - 300,window.innerHeight / 2], 12, false, 100);
     </script>
 </body>
 </html>
