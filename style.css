@@ -19,9 +19,14 @@ section#intro
 
 p#name
 {
-    position: relative;
+    position: absolute;
     color: #ecf0f1;
-    /*Replace margin-top*/
+    left: 50%;
+    top: 40%;
+
+    -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+            transform: translate(-50%, -50%);
 
     -webkit-animation: fadein 1.5s;
        -moz-animation: fadein 1.5s;
@@ -30,62 +35,32 @@ p#name
             animation: fadein 1.5s;
 }
 
-img#downanim
-{
-    position: relative;
-    width: 2%;
-    /*Replace margin-top*/
-
-    -webkit-transition: all 0.75s ease-out;
-       -moz-transition: all 0.75s ease-out;
-        -ms-transition: all 0.75s ease-out;
-         -o-transition: all 0.75s ease-out;
-            transition: all 0.75s ease-out;
-}
-
-img#downanim:hover
-{
-    /*Replace margin-top*/
-    color: #ecf0f1;
-
-    -webkit-transition: all 0.75s ease-out;
-       -moz-transition: all 0.75s ease-out;
-        -ms-transition: all 0.75s ease-out;
-         -o-transition: all 0.75s ease-out;
-            transition: all 0.75s ease-out;
-}
-
 @keyframes fadein
 {
-    /*Replace margin-top*/
-    from { opacity: 0; margin-top: 21.5%; }
-    to { opacity: 1; margin-top: 20%; }
+    from { opacity: 0; top: 41.5%; }
+    to { opacity: 1; top: 40%; }
 }
 
 @-moz-keyframes fadein
 {
-    /*Replace margin-top*/
-    from { opacity: 0; margin-top: 21.5%; }
-    to { opacity: 1; margin-top: 20%; }
+    from { opacity: 0; top: 41.5%; }
+    to { opacity: 1; top: 40%; }
 }
 
 @-webkit-keyframes fadein
 {
-    /*Replace margin-top*/
-    from { opacity: 0; margin-top: 21.5%; }
-    to { opacity: 1; margin-top: 20%; }
+    from { opacity: 0; top: 41.5%; }
+    to { opacity: 1; top: 40%; }
 }
 
 @-ms-keyframes fadein
 {
-    /*Replace margin-top*/
-    from { opacity: 0; margin-top: 21.5%; }
-    to { opacity: 1; margin-top: 20%; }
+    from { opacity: 0; top: 41.5%; }
+    to { opacity: 1; top: 40%; }
 }​
 
 @-o-keyframes fadein
 {
-    /*Replace margin-top*/
-    from { opacity: 0; margin-top: 21.5%; }
-    to { opacity: 1; margin-top: 20%; }
+    from { opacity: 0; top: 41.5%; }
+    to { opacity: 1; top: 40%; }
 }​
