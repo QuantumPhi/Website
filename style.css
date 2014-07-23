@@ -29,8 +29,14 @@ svg#fractal {
 }
 
 svg path.dragon {
-    stroke: #2ecc71;
+    stroke: #e74c3c;
     stroke-width: 2;
+
+    -webkit-animation: colorize 7.5s infinite;
+       -moz-animation: colorize 7.5s infinite;
+        -ms-animation: colorize 7.5s infinite;
+         -o-animation: colorize 7.5s infinite;
+            animation: colorize 7.5s infinite;
 }
 
 section#intro
@@ -42,7 +48,7 @@ section#intro
     font-size: 60px;
     text-align: center;
     width: 100%;
-    height: 95%;
+    height: 100%;
 }
 
 section#about
@@ -143,4 +149,59 @@ p#name
 {
     from { opacity: 0; top: 41.5%; }
     to { opacity: 1; top: 40%; }
+}​
+
+@keyframes colorize
+{
+    0% { stroke: #e74c3c; }
+    16% { stroke: #f1c40f; }
+    33% { stroke: #e67e22; }
+    50% { stroke: #2ecc71; }
+    66% { stroke: #3498db; }
+    83% { stroke: #9b59b6; }
+    100% { stroke: #e74c3c; }
+}
+
+@-moz-keyframes colorize
+{
+    0% { stroke: #e74c3c; }
+    16% { stroke: #f1c40f; }
+    33% { stroke: #e67e22; }
+    50% { stroke: #2ecc71; }
+    66% { stroke: #3498db; }
+    83% { stroke: #9b59b6; }
+    100% { stroke: #e74c3c; }
+}
+
+@-webkit-keyframes colorize
+{
+    0% { stroke: #e74c3c; }
+    16% { stroke: #f1c40f; }
+    33% { stroke: #e67e22; }
+    50% { stroke: #2ecc71; }
+    66% { stroke: #3498db; }
+    83% { stroke: #9b59b6; }
+    100% { stroke: #e74c3c; }
+}
+
+@-ms-keyframes colorize
+{
+    0% { stroke: #e74c3c; }
+    16% { stroke: #f1c40f; }
+    33% { stroke: #e67e22; }
+    50% { stroke: #2ecc71; }
+    66% { stroke: #3498db; }
+    83% { stroke: #9b59b6; }
+    100% { stroke: #e74c3c; }
+}​
+
+@-o-keyframes colorize
+{
+    0% { stroke: #e74c3c; }
+    16% { stroke: #f1c40f; }
+    33% { stroke: #e67e22; }
+    50% { stroke: #2ecc71; }
+    66% { stroke: #3498db; }
+    83% { stroke: #9b59b6; }
+    100% { stroke: #e74c3c; }
 }​
