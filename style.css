@@ -74,6 +74,8 @@ p#name
     left: 50%;
     top: 40%;
 
+    -webkit-backface-visibility: hidden;
+
     -webkit-animation: fadein 1.5s;
        -moz-animation: fadein 1.5s;
         -ms-animation: fadein 1.5s;
@@ -112,6 +114,11 @@ p#name
     height: 60%;
     left: 50%;
     top: 20%;
+
+    image-rendering: optimizeQuality;
+    -ms-interpolation-mode: bicubic;
+
+    -webkit-backface-visibility: hidden;
 
     -webkit-transition: all 0.75s;
        -moz-transition: all 0.75s;
