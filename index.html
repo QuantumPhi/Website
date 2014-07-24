@@ -65,8 +65,7 @@
             });
         })();
 
-        $('svg#fractal').click(function(event) {
-            event.preventDefault();
+        window.setInterval(function() {
             var colors = [
                 '#e74c3c',
                 '#f1c40f',
@@ -81,9 +80,8 @@
             var color = $(this).children().css('stroke');
             colors.remove(color);
             var next = colors[Math.floor(Math.random() * colors.length)];
-
-            $(this).children().css('stroke', next);
-        });
+            $('svg#fractal').children().css('stroke', next);
+        }, 5000);
 
         DRAGON.fractal('fractal', [300,$(window).height() / 2 + 110], [$(window).width() - 300,$(window).height() / 2 + 110], 12, false, 100);
     </script>
