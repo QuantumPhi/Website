@@ -72,10 +72,20 @@
             $(this).children().css('stroke', next);
         });
 
-        $('img#heart').hover(function(event) {
+        $('img#heart').mouseover(function(event) {
             event.preventDefault();
             $(this).attr('src', 'res/github-icon.svg');
+
+            var width = $(this).css('width');
+            var height = $(this).css('height');
+            $(this).css('width', width);
+            $(this).css('height', height);
         });
+
+        $('img#heart').mouseout(function(event) {
+            event.preventDefault();
+            $(this).attr('src', 'res/github-heart.svg');
+        })
 
         DRAGON.fractal('fractal', [300,$(window).height() / 2 + 110], [$(window).width() - 300,$(window).height() / 2 + 110], 12, false, 100);
     </script>
