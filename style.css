@@ -154,6 +154,12 @@ img#heart
     -webkit-transform: translateX(0%);
         -ms-transform: translateX(0%);
             transform: translateX(0%);
+
+    -webkit-animation: pulse 2s infinite;
+       -moz-animation: pulse 2s infinite;
+        -ms-animation: pulse 2s infinite;
+         -o-animation: pulse 2s infinite;
+            animation: pulse 2s infinite;
 }
 
 img#github
@@ -181,4 +187,39 @@ img#license
             transform: translateX(0%);
 }
 
-@keyframes fadein { from { opacity: 0; top: 41.5%; } to { opacity: 1; top: 40%; } } @-moz-keyframes fadein { from { opacity: 0; top: 41.5%; } to { opacity: 1; top: 40%; } } @-webkit-keyframes fadein { from { opacity: 0; top: 41.5%; } to { opacity: 1; top: 40%; } } @-ms-keyframes fadein { from { opacity: 0; top: 41.5%; } to { opacity: 1; top: 40%; } }​ @-o-keyframes fadein { from { opacity: 0; top: 41.5%; } to { opacity: 1; top: 40%; } }​
+@keyframes fadein { from { opacity: 0; top: 41.5%; } to { opacity: 1; top: 40%; } } @-webkit-keyframes fadein { from { opacity: 0; top: 41.5%; } to { opacity: 1; top: 40%; } } @-moz-keyframes fadein { from { opacity: 0; top: 41.5%; } to { opacity: 1; top: 40%; } } @-ms-keyframes fadein { from { opacity: 0; top: 41.5%; } to { opacity: 1; top: 40%; } }​ @-o-keyframes fadein { from { opacity: 0; top: 41.5%; } to { opacity: 1; top: 40%; } }​
+
+@keyframes pulse
+{
+    0% { transform: scale(1); }
+    50% { transform: scale(3); }
+    100% { transform: scale(1); }
+}
+
+@-webkit-keyframes pulse
+{
+    0% { transform: scale(1); }
+    50% { transform: scale(3); }
+    100% { transform: scale(1); }
+}
+
+@-moz-keyframes pulse
+{
+    0% { transform: scale(1); }
+    50% { transform: scale(3); }
+    100% { transform: scale(1); }
+}
+
+@-ms-keyframes pulse
+{
+    0% { transform: scale(1); }
+    50% { transform: scale(3); }
+    100% { transform: scale(1); }
+}
+
+@-o-keyframes pulse
+{
+    0% { transform: scale(1); }
+    50% { transform: scale(3); }
+    100% { transform: scale(1); }
+}
