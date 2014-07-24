@@ -27,11 +27,13 @@
     <section id='footer'>
         <p style='position: absolute; font-size: 30; left: 50%; top: 50%;'>
             Created with
-            <img src='res/github-heart.svg' id='heart'/>
+            <img src='res/github/github-heart.svg' id='heart'/>
              by
              <a href='//github.com/QuantumPhi'>Tarik Onalan</a>
             <!-- <3 -->
         </p>
+        <img src='res/cc/cc.svg'/>
+        <img src='res/cc/by.svg'/>
     </section>
 
     <script>
@@ -74,13 +76,13 @@
 
         $('img#heart').mouseover(function(event) {
             event.preventDefault();
-            $(this).attr('src', 'res/github-icon.svg');
+            $(this).attr('src', 'res/github/github-icon.svg');
             $(this).attr('id', 'github');
         });
 
-        $('img#heart').mouseout(function(event) {
+        $('img#github').mouseout(function(event) {
             event.preventDefault();
-            $(this).attr('src', 'res/github-heart.svg');
+            $(this).attr('src', 'res/github/github-heart.svg');
             $(this).attr('id', 'heart');
         })
 
