@@ -28,9 +28,9 @@
         <p style='position: absolute; font-size: 30; left: 50%; top: 50%;'>
             Created with
             <img src='res/github/github-heart.svg' id='heart'/>
-            <img src='res/github/github-icon.svg' id='github'/>
             by
             <a href='//github.com/QuantumPhi'>Tarik Onalan</a>
+            <img src='res/github/github-icon.svg' id='github'/>
             <!-- <3 -->
         </p>
         <img src='res/cc/cc.svg' id='license'/>
@@ -56,22 +56,12 @@
         })();
 
         (function() {
-            var obj = $('img#heart');
+            var obj = $('img#license');
             $('img#github').css({
                 'width' : obj.width(),
                 'height' : obj.height()
             });
         })();
-
-        $('img#heart').mouseover(function(event) {
-            event.preventDefault();
-            $('img#github').addClass('hover');
-        });
-
-        $('img#github').mouseout(function(event) {
-            event.preventDefault();
-            $(this).removeClass('hover');
-        });
 
         $('svg#fractal').click(function(event) {
             event.preventDefault();

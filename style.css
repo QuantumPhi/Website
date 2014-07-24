@@ -158,32 +158,15 @@ img#heart
 
 img#github
 {
-    position: absolute;
+    position: relative;
     width: 0px;
     height: 0px;
-
-    opacity: 1;
+    left: -47%;
+    top: 94.5%;
 
     -webkit-transform: translateX(0%);
         -ms-transform: translateX(0%);
             transform: translateX(0%);
-
-    -webkit-backface-visibility: hidden;
-
-    -webkit-transition: transform 1s;
-       -moz-transition: transform 1s;
-        -ms-transition: transform 1s;
-         -o-transition: transform 1s;
-            transition: transform 1s;
-}
-
-img#github.hover
-{
-    opacity: 0;
-
-    -webkit-transform: scale(5, 5) rotation(360deg);
-        -ms-transform: scale(5, 5) rotation(360deg);
-            transform: scale(5, 5) rotation(360deg);
 }
 
 img#license
