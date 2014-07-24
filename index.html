@@ -76,8 +76,14 @@
 
         $('img#heart').mouseover(function(event) {
             event.preventDefault();
+            var w = $(this).width();
+            var h = $(this).height();
             $(this).attr('src', 'res/github/github-icon.svg');
             $(this).attr('id', 'github');
+            $(this).css({
+                'width' : w,
+                'height' : h
+            });
         });
 
         $('img#heart').mouseout(function(event) {
