@@ -172,7 +172,7 @@ img#license
     position: relative;
     width: 10%;
     height: 10%;
-    left: 10%;
+    left: -40%;
     top: 90%;
 
     -webkit-transform: translateX(0%);
