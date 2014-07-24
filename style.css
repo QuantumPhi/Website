@@ -158,13 +158,30 @@ img#heart
 
 img#github
 {
-    position: relative;
+    position: absolute;
     width: 0px;
     height: 0px;
+
+    opacity: 1;
 
     -webkit-transform: translateX(0%);
         -ms-transform: translateX(0%);
             transform: translateX(0%);
+
+    -webkit-transition: all 1s;
+       -moz-transition: all 1s;
+        -ms-transition: all 1s;
+         -o-transition: all 1s;
+            transition: all 1s;
+}
+
+img#github.hover
+{
+    opacity: 0;
+
+    -webkit-transform: scale(3, 3) rotation(360deg);
+        -ms-transform: scale(3, 3) rotation(360deg);
+            transform: scale(3, 3) rotation(360deg);
 }
 
 img#license

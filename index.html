@@ -63,6 +63,16 @@
             });
         })();
 
+        $('img#heart').mouseover(function(event) {
+            event.preventDefault();
+            $('img#github').addClass('hover');
+        });
+
+        $('img#github').mouseout(function(event) {
+            event.preventDefault();
+            $(this).removeClass('hover');
+        });
+
         $('svg#fractal').click(function(event) {
             event.preventDefault();
             var colors = [
