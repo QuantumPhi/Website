@@ -12,7 +12,7 @@
 <body>
     <section id='intro'>
         <div>
-           <svg xmlns='http://www.w3.org/2000/svg' id='fractal'></svg>
+           <svg xmlns='http://www.w3.org/2000/svg' id='headfractal'></svg>
         </div>
         <p id='name'>Tarik Onalan</p>
         <a href='#about' class='icon-container scroll'>
@@ -25,6 +25,9 @@
     </section>
 
     <section id='footer'>
+        <div>
+           <svg xmlns='http://www.w3.org/2000/svg' id='footfractal'></svg>
+        </div>
         <p style='position: absolute; font-size: 30; left: 50%; top: 50%;'>
             Created with
             <img src='res/github/github-heart.svg' id='heart'/>
@@ -85,7 +88,8 @@
             $(this).children().css('stroke', next);
         });
 
-        DRAGON.fractal('fractal', [300,$(window).height() / 2 + 110], [$(window).width() - 300,$(window).height() / 2 + 110], 12, false, 100);
+        DRAGON.fractal('headfractal', [300,$(window).height() / 2 + 110], [$(window).width() - 300,$(window).height() / 2 + 110], 12, false, 100);
+        DRAGON.fractal('footfractal', [300,$(window).height() / 2 + 110], [$(window).width() - 300,$(window).height() / 2 + 110], 12, false, 100);
     </script>
 </body>
 </html>
