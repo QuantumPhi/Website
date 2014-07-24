@@ -168,6 +168,8 @@ img#github
         -ms-transform: translateX(0%);
             transform: translateX(0%);
 
+    -webkit-backface-visibility: hidden;
+
     -webkit-transition: transform 1s;
        -moz-transition: transform 1s;
         -ms-transition: transform 1s;
