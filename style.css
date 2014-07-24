@@ -170,10 +170,10 @@ img#github
 img#license
 {
     position: relative;
-    width: 10%;
-    height: 10%;
-    left: -40%;
-    top: 90%;
+    width: 1.5%;
+    left: -47%;
+    top: 94.5%;
+    border-width: 0px;
 
     -webkit-transform: translateX(0%);
         -ms-transform: translateX(0%);
