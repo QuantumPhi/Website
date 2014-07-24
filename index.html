@@ -5,7 +5,8 @@
     <link href='style.css' rel='stylesheet'>
     <title>Tarik Onalan</title>
 
-    <script src='js/smooth-scroll.min.js'></script>
+    <script src='js/jquery-2.1.1.min.js'></script>
+    <script src='js/smooth-scroll.js'></script>
     <script src='js/dragon.js'></script>
 </head>
 <body>
@@ -14,7 +15,7 @@
            <svg xmlns='http://www.w3.org/2000/svg' id='fractal'></svg>
         </div>
         <p id='name'>Tarik Onalan</p>
-        <a data-scroll href='#about' class='icon-container'>
+        <a href='#about' class='icon-container scroll'>
             <img src='res/downarrow.png' class='transition'/>
         </a>
     </section>
@@ -25,22 +26,13 @@
 
     <script>
         function setWidthHeight() {
-            var obj = document.querySelectorAll('.icon-container');
-            obj[0].style.width = window.innerWidth * 0.03 + 'px';
-            obj[0].style.height = obj[0].style.width;
+            var obj = $('.icon-container');
+            obj.height($(window).height() * 0.05);
+            obj.width(obj.height());
         };
         setWidthHeight();
 
-        smoothScroll.init({
-            speed: 500,
-            easing: 'easeInOutCubic',
-            updateURL: true,
-            offset: 0,
-            callbackBefore: function ( toggle, anchor ) {},
-            callbackAfter: function ( toggle, anchor ) {}
-        });
-
-        DRAGON.fractal('fractal', [300,window.innerHeight / 2 + 110], [window.innerWidth - 300,window.innerHeight / 2 + 110], 12, false, 100);
+        DRAGON.fractal('fractal', [300,$(window).height() / 2 + 110], [$(window).width() - 300,$(window).height() / 2 + 110], 12, false, 100);
     </script>
 </body>
 </html>
