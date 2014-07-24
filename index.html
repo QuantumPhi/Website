@@ -24,6 +24,16 @@
         <p style='position: absolute; font-size: 45; left: 50%;'></p>
     </section>
 
+    <section id='footer'>
+        <p style='position: absolute; font-size: 30; left: 50%;'>
+            Created with
+            <img src='res/github-heart.png' id='heart'/>
+             by
+             <a href='//github.com/QuantumPhi'>Tarik Onalan</a>
+            <!-- <3 -->
+        </p>
+    </section>
+
     <script>
         Array.prototype.remove = function() {
             var what, a = arguments, L = a.length, ax;
@@ -56,9 +66,7 @@
             ];
 
             var color = $(this).children().css('stroke');
-
             colors.remove(color);
-
             var next = colors[Math.floor(Math.random() * colors.length)];
 
             $(this).children().css('stroke', next);
