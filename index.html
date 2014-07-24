@@ -27,7 +27,7 @@
     <section id='footer'>
         <p style='position: absolute; font-size: 30; left: 50%; top: 50%;'>
             Created with
-            <img src='res/github-heart.png' id='heart'/>
+            <img src='res/github-heart.svg' id='heart'/>
              by
              <a href='//github.com/QuantumPhi'>Tarik Onalan</a>
             <!-- <3 -->
@@ -70,6 +70,11 @@
             var next = colors[Math.floor(Math.random() * colors.length)];
 
             $(this).children().css('stroke', next);
+        });
+
+        $('img#heart').hover(function(event) {
+            event.preventDefault();
+            $(this).attr('src', 'res/github-icon.svg');
         });
 
         DRAGON.fractal('fractal', [300,$(window).height() / 2 + 110], [$(window).width() - 300,$(window).height() / 2 + 110], 12, false, 100);
