@@ -155,6 +155,9 @@ img#heart
         -ms-transform: translateX(0%);
             transform: translateX(0%);
 
+    image-rendering: optimizeSpeed;
+    -ms-interpolation-mode: nearest-neighbor;
+
     -webkit-animation: pulse 2s infinite;
        -moz-animation: pulse 2s infinite;
         -ms-animation: pulse 2s infinite;
