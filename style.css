@@ -149,11 +149,22 @@ p#name
 
 img#heart
 {
-    position: relative;
+    position: absolute;
 
     -webkit-transform: translateX(0%);
         -ms-transform: translateX(0%);
             transform: translateX(0%);
+
+    -webkit-transition: opacity 1s ease-out;
+       -moz-transition: opacity 1s ease-out;
+        -ms-transition: opacity 1s ease-out;
+         -o-transition: opacity 1s ease-out;
+            transition: opacity 1s ease-out;
+}
+
+img#heart:hover
+{
+    opacity: 1;
 }
 
 img#github

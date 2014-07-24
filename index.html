@@ -27,6 +27,9 @@
     <section id='footer'>
         <p style='position: absolute; font-size: 30; left: 50%; top: 50%;'>
             Created with
+            <a href='//github.com/QuantumPhi/quantumphi.github.io'>
+                <img src='res/github/github-icon.svg' id='github'/>
+            </a>
             <img src='res/github/github-heart.svg' id='heart'/>
              by
              <a href='//github.com/QuantumPhi'>Tarik Onalan</a>
@@ -48,10 +51,26 @@
             return this;
         };
 
-        (function () {
+        (function() {
             var obj = $('.icon-container');
             obj.height($(window).height() * 0.05);
             obj.width(obj.height());
+        })();
+
+        (function() {
+            var obj = $('img#heart');
+            $('img#github').css({
+                'width' : obj.width(),
+                'height' : obj.height()
+            });
+        })();
+
+        (function() {
+            var parent = $('img#github').parent();
+            $('img#heart').css({
+                'left' : parent.position().left;
+                'top' : parent.position().top;
+            });
         })();
 
         $('svg#fractal').click(function(event) {
@@ -73,24 +92,6 @@
 
             $(this).children().css('stroke', next);
         });
-
-        $('img#heart').mouseover(function(event) {
-            event.preventDefault();
-            var w = $(this).width();
-            var h = $(this).height();
-            $(this).attr('src', 'res/github/github-icon.svg');
-            $(this).attr('id', 'github');
-            $(this).css({
-                'width' : w,
-                'height' : h
-            });
-        });
-
-        $('img#heart').mouseout(function(event) {
-            event.preventDefault();
-            $(this).attr('src', 'res/github/github-heart.svg');
-            $(this).attr('id', 'heart');
-        })
 
         DRAGON.fractal('fractal', [300,$(window).height() / 2 + 110], [$(window).width() - 300,$(window).height() / 2 + 110], 12, false, 100);
     </script>
