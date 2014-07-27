@@ -8,6 +8,19 @@
     <script src='js/jquery-2.1.1.min.js'></script>
     <script src='js/smooth-scroll.min.js'></script>
     <script src='js/dragon.js'></script>
+
+    <script>
+        Array.prototype.remove = function() {
+            var what, a = arguments, L = a.length, ax;
+            while (L && this.length) {
+                what = a[--L];
+                while ((ax = this.indexOf(what)) !== -1) {
+                    this.splice(ax, 1);
+                }
+            }
+            return this;
+        };
+    </script>
 </head>
 <body>
     <section id='intro'>
@@ -21,12 +34,16 @@
     </section>
 
     <section id='about'>
-        <p style='position: absolute; font-size: 45; left: 50%;'></p>
+        <p style='position: absolute; font-size: 45; left: 50%;'>About me:</p>
+        <p style='position: relative; font-size: 37.5; left: 25%;'>
+
+        </p>
     </section>
 
     <section id='footer'>
         <p style='position: absolute; font-size: 30; left: 50%; top: 50%;'>
-            Created with&nbsp;
+            <img src='res/github/github-code.svg' id='code'/>
+            &nbsp;with&nbsp;
             <img src='res/github/github-heart.svg' id='heart'/>
             &nbsp;by
             <a href='//github.com/QuantumPhi'>Tarik Onalan</a>
@@ -40,17 +57,6 @@
     </section>
 
     <script>
-        Array.prototype.remove = function() {
-            var what, a = arguments, L = a.length, ax;
-            while (L && this.length) {
-                what = a[--L];
-                while ((ax = this.indexOf(what)) !== -1) {
-                    this.splice(ax, 1);
-                }
-            }
-            return this;
-        };
-
         (function() {
             var obj = $('.icon-container');
             obj.height($(window).height() * 0.05);
@@ -74,6 +80,8 @@
             var next = colors[Math.floor(Math.random() * colors.length)];
             $('svg#fractal').children().css('stroke', next);
         }, 5000);
+
+        console.log("left: " + 300 / $(window).width() + " topPX: " + 110 / $(window).height());
 
         DRAGON.fractal('fractal', [300,$(window).height() / 2 + 110], [$(window).width() - 300,$(window).height() / 2 + 110], 12, false, 100);
     </script>
