@@ -5,6 +5,7 @@
     <link href='style.css' rel='stylesheet'>
     <title>Tarik Onalan</title>
 
+    <script src='js/GSAP/TimelineLite.min.js'></script>
     <script src='js/GSAP/TweenLite.min.js'></script>
     <script src='js/GSAP/plugins/CSSPlugin.min.js'></script>
     <script src='js/GSAP/plugins/ScrollToPlugin.min.js'></script>
@@ -56,6 +57,11 @@
 
     <script>
         var _window = $(window);
+        var tl = new TimelineMax({ repeat: -1 });
+
+        (function() {
+            tl.to($('img#heart'), 1, { scaleX: 1.5, scaleY: 1.5; onComplete: reverse; });
+        })();
 
         (function() {
             var obj = $('.icon-container');
