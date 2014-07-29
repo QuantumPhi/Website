@@ -7,9 +7,9 @@
 
     <script src='js/GSAP/TimelineLite.min.js'></script>
     <script src='js/GSAP/TweenLite.min.js'></script>
-    <script src='js/GSAP/plugins/CSSPlugin.min.js'></script>
-    <script src='js/GSAP/plugins/ScrollToPlugin.min.js'></script>
-    <script src='js/GSAP/easing/EasePack.min.js'></script>
+    <script src='js/GSAP/CSSPlugin.min.js'></script>
+    <script src='js/GSAP/ScrollToPlugin.min.js'></script>
+    <script src='js/GSAP/EasePack.min.js'></script>
     <script src='js/jquery-2.1.1.min.js'></script>
     <script src='js/smooth-scroll.min.js'></script>
     <script src='js/dragon.js'></script>
@@ -17,7 +17,7 @@
     <script>
         window.onload = function() {
             var name = $('p#name');
-            TweenLite.from(name, 1.5, { css:{ top: 41.5%; }, autoAlpha:0, ease: Power2.easeOut });
+            TweenLite.from(name, 1.5, { css:{ top: 41.5% }, autoAlpha:0, ease: Power2.easeOut });
         }
     </script>
 </head>
@@ -60,7 +60,7 @@
         var tl = new TimelineMax({ repeat: -1 });
 
         (function() {
-            tl.to($('img#heart'), 1, { scaleX: 1.5, scaleY: 1.5; onComplete: reverse; });
+            tl.to($('img#heart'), 1, { scaleX: 1.5, scaleY: 1.5, onComplete: reverse });
         })();
 
         (function() {
