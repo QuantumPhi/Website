@@ -16,7 +16,7 @@
     <script>
         window.onload = function() {
             var name = $('p#name');
-            TweenLite.from(name, css:{ top: 41.5%; });
+            TweenLite.from(name, 1.5, { css:{ top: 41.5%; }, autoAlpha:0, ease: Power2.easeOut });
         }
     </script>
 </head>
