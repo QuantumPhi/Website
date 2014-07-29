@@ -16,7 +16,7 @@
     <script>
         window.onload = function() {
             var name = $('p#name');
-            TweenLite.from(name, 1.5, { css:{ top: 41.5% }, autoAlpha:0, ease: Power2.easeOut });
+            TweenLite.from(name, 1.5, { css:{ top: 41.5% }, autoAlpha: 0, ease: Power2.easeOut });
         }
     </script>
 </head>
@@ -63,8 +63,8 @@
         })();
 
         $('.icon-container').mouseover(function() {
-            TweenLite.to($(this), 0.75, css:{ background-color: #bdc3c7 });
-            TweenLite.to($(this).children('img.icon'), 0.75, css:{ top: 35% });
+            TweenLite.to($(this), 0.75, { css:{ backgroundColor: #bdc3c7 } });
+            TweenLite.to($(this).children('img.icon'), 0.75, { css:{ top: 35% } });
         });
 
         (function() {
