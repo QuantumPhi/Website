@@ -44,7 +44,7 @@ svg#fractal {
 }
 
 svg path.dragon {
-    stroke: #34495e;
+    stroke: #7f8c8d;
     stroke-width: 2;
 
     -webkit-transition: stroke 1.5s ease-in-out;
