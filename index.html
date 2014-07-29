@@ -5,22 +5,13 @@
     <link href='style.css' rel='stylesheet'>
     <title>Tarik Onalan</title>
 
+    <script src=js/GSAP/TweenLite.min.js></script>
+    <script src=js/GSAP/plugins/CSSPlugin.min.js></script>
+    <script src=js/GSAP/plugins/ScrollToPlugin.min.js></script>
+    <script src=js/GSAP/easing/EasePack.min.js></script>
     <script src='js/jquery-2.1.1.min.js'></script>
     <script src='js/smooth-scroll.min.js'></script>
     <script src='js/dragon.js'></script>
-
-    <script>
-        Array.prototype.remove = function() {
-            var what, a = arguments, L = a.length, ax;
-            while (L && this.length) {
-                what = a[--L];
-                while ((ax = this.indexOf(what)) !== -1) {
-                    this.splice(ax, 1);
-                }
-            }
-            return this;
-        };
-    </script>
 </head>
 <body>
     <section id='intro'>
@@ -65,7 +56,7 @@
             obj.width(obj.height());
         })();
 
-        DRAGON.fractal('fractal', [0.22 * _window.width(),_window.height() / 2 + 90], [_window.width() * 0.78,_window.height() / 2 + 90], 12, false, 100);
+        DRAGON.fractal('fractal', [_window.width() * 0.22,_window.height() / 2 + 90], [_window.width() * 0.78,_window.height() / 2 + 90], 12, false, 100);
     </script>
 </body>
 </html>
