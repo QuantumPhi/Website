@@ -5,13 +5,20 @@
     <link href='style.css' rel='stylesheet'>
     <title>Tarik Onalan</title>
 
-    <script src=js/GSAP/TweenLite.min.js></script>
-    <script src=js/GSAP/plugins/CSSPlugin.min.js></script>
-    <script src=js/GSAP/plugins/ScrollToPlugin.min.js></script>
-    <script src=js/GSAP/easing/EasePack.min.js></script>
+    <script src='js/GSAP/TweenLite.min.js'></script>
+    <script src='js/GSAP/plugins/CSSPlugin.min.js'></script>
+    <script src='js/GSAP/plugins/ScrollToPlugin.min.js'></script>
+    <script src='js/GSAP/easing/EasePack.min.js'></script>
     <script src='js/jquery-2.1.1.min.js'></script>
     <script src='js/smooth-scroll.min.js'></script>
     <script src='js/dragon.js'></script>
+
+    <script>
+        window.onload = function() {
+            var name = $('p#name');
+            TweenLite.from(name, css:{ top: 41.5%; });
+        }
+    </script>
 </head>
 <body>
     <section id='intro'>

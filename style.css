@@ -46,12 +46,6 @@ svg#fractal {
 svg path.dragon {
     stroke: #7f8c8d;
     stroke-width: 2;
-
-    -webkit-transition: stroke 1.5s ease-in-out;
-       -moz-transition: stroke 1.5s ease-in-out;
-        -ms-transition: stroke 1.5s ease-in-out;
-         -o-transition: stroke 1.5s ease-in-out;
-            transition: stroke 1.5s ease-in-out;
 }
 
 section#intro
@@ -88,14 +82,6 @@ p#name
     color: #ecf0f1;
     left: 50%;
     top: 40%;
-
-    -webkit-backface-visibility: hidden;
-
-    -webkit-animation: fadein 1.5s;
-       -moz-animation: fadein 1.5s;
-        -ms-animation: fadein 1.5s;
-         -o-animation: fadein 1.5s;
-            animation: fadein 1.5s;
 }
 
 .icon-container
@@ -109,12 +95,6 @@ p#name
     height: 10px;
     left: 50%;
     top: 90%;
-
-    -webkit-transition: background-color 0.75s;
-       -moz-transition: background-color 0.75s;
-        -ms-transition: background-color 0.75s;
-         -o-transition: background-color 0.75s;
-            transition: background-color 0.75s;
 }
 
 .icon-container:hover
