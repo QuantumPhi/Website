@@ -28,7 +28,7 @@
         </div>
         <p id='name'>Tarik Onalan</p>
         <a href='#about' class='icon-container scroll'>
-            <img src='res/content/downarrow.svg' class='transition'/>
+            <img src='res/content/downarrow.svg' class='icon'/>
         </a>
     </section>
 
@@ -62,6 +62,11 @@
         (function() {
             tl.to($('img#heart'), 1, { scaleX: 1.5, scaleY: 1.5, onComplete: reverse });
         })();
+
+        $('.icon-container').mouseover(function() {
+            TweenLite.to($(this), 0.75, css:{ background-color: #bdc3c7 });
+            TweenLite.to($(this).children('img.icon'), 0.75, css:{ top: 35% });
+        });
 
         (function() {
             var obj = $('.icon-container');

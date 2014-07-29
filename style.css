@@ -97,12 +97,7 @@ p#name
     top: 90%;
 }
 
-.icon-container:hover
-{
-    background-color: #bdc3c7;
-}
-
-.icon-container img.transition
+.icon-container img.icon
 {
     position: absolute;
     width: 60%;
@@ -112,19 +107,6 @@ p#name
 
     image-rendering: optimizeQuality;
     -ms-interpolation-mode: bicubic;
-
-    -webkit-backface-visibility: hidden;
-
-    -webkit-transition: all 0.75s;
-       -moz-transition: all 0.75s;
-        -ms-transition: all 0.75s;
-         -o-transition: all 0.75s;
-            transition: all 0.75s;
-}
-
-.icon-container:hover img.transition
-{
-    top: 35%;
 }
 
 img#heart
@@ -137,12 +119,6 @@ img#heart
 
     image-rendering: optimizeSpeed;
     -ms-interpolation-mode: nearest-neighbor;
-
-    -webkit-animation: pulse 2s infinite;
-       -moz-animation: pulse 2s infinite;
-        -ms-animation: pulse 2s infinite;
-         -o-animation: pulse 2s infinite;
-            animation: pulse 2s infinite;
 }
 
 img#code
@@ -178,6 +154,3 @@ img#license
         -ms-transform: translateX(0%);
             transform: translateX(0%);
 }
-
-@keyframes fadein { from { opacity: 0; top: 41.5%; } to { opacity: 1; top: 40%; } } @-webkit-keyframes fadein { from { opacity: 0; top: 41.5%; } to { opacity: 1; top: 40%; } } @-moz-keyframes fadein { from { opacity: 0; top: 41.5%; } to { opacity: 1; top: 40%; } } @-ms-keyframes fadein { from { opacity: 0; top: 41.5%; } to { opacity: 1; top: 40%; } }​ @-o-keyframes fadein { from { opacity: 0; top: 41.5%; } to { opacity: 1; top: 40%; } }​
-@keyframes pulse { 0% { transform: scale(1); } 50% { transform: scale(1.5); } 100% { transform: scale(1); } } @-webkit-keyframes pulse { 0% { -webkit-transform: scale(1); } 50% { -webkit-transform: scale(1.5); } 100% { -webkit-transform: scale(1); } } @-moz-keyframes pulse { 0% { transform: scale(1); } 50% { transform: scale(1.5); } 100% { transform: scale(1); } } @-ms-keyframes pulse { 0% { -ms-transform: scale(1); } 50% { -ms-transform: scale(1.5); } 100% { -ms-transform: scale(1); } } @-o-keyframes pulse { 0% { transform: scale(1); } 50% { transform: scale(1.5); } 100% { transform: scale(1); } }
