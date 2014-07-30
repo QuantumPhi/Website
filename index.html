@@ -26,7 +26,7 @@
            <svg xmlns='http://www.w3.org/2000/svg' id='fractal'></svg>
         </div>
         <p id='name'>Tarik Onalan</p>
-        <a href='#about' class='icon-container scroll'>
+        <a href='#about' class='icon-container'>
             <img src='res/content/downarrow.svg' class='icon'/>
         </a>
     </section>
@@ -58,6 +58,20 @@
         var _window = $(window);
         var tl = new TimelineLite();
 
+        var setDimensions = (function() {
+            var obj = $('.icon-container');
+            obj.height(_window.height() * 0.05);
+            obj.width(obj.height());
+            obj.css('border-width', _window.width() * 0.0037);
+        });
+        setDimensions();
+
+        var fractal = (function() {
+            $('svg#fractal').empty('path.dragon');
+            DRAGON.fractal('fractal', [_window.width() * 0.22,_window.height() / 2 + 90], [_window.width() * 0.78,_window.height() / 2 + 90], 12, false, 100);
+        });
+        fractal();
+
         (function() {
             tl.to($('img#heart'), 1, { scaleX: 1.5, scaleY: 1.5, ease: Power2.easeOut })
               .to($('img#heart'), 1, { scaleX: 1.0, scaleY: 1.0, ease: Power2.easeOut,
@@ -67,6 +81,8 @@
                   })
               });
         })();
+
+        console.log(2 / _window.width() + " " + 5 / _window.width());
 
         $('.icon-container').mouseover(function() {
             TweenLite.to($(this), 0.75, { css:{ backgroundColor: '#bdc3c7' }, ease: Power2.easeOut });
@@ -78,13 +94,15 @@
             TweenLite.to($(this).children('img.icon'), 0.75, { css:{ top: '20%' }, ease: Power2.easeOut });
         });
 
-        (function() {
-            var obj = $('.icon-container');
-            obj.height(_window.height() * 0.05);
-            obj.width(obj.height());
-        })();
+        $('.icon-container').click(function(event) {
+            event.preventDefault();
+            TweenLite.to(window, 0.5, { scrollTo:{ y: $($(this).attr('href')).offset().top }, ease: Power2.easeOut });
+        });
 
-        DRAGON.fractal('fractal', [_window.width() * 0.22,_window.height() / 2 + 90], [_window.width() * 0.78,_window.height() / 2 + 90], 12, false, 100);
+        $(window).resize(function() {
+            setDimensions();
+            fractal();
+        })
     </script>
 </body>
 </html>
