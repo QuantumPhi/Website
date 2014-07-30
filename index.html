@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <link href='http://fonts.googleapis.com/css?family=Questrial' rel='stylesheet'>
+    <link href='//fonts.googleapis.com/css?family=Questrial' rel='stylesheet'>
     <link href='style.css' rel='stylesheet'>
     <title>Tarik Onalan</title>
 
@@ -16,7 +16,7 @@
     <script>
         window.onload = function() {
             var name = $('p#name');
-            TweenLite.from(name, 1.5, { css:{ top: 41.5% }, autoAlpha: 0, ease: Power2.easeOut });
+            TweenLite.from(name, 1.5, { css:{ top: '41.5%' }, autoAlpha: 0, ease: Power2.easeOut });
         }
     </script>
 </head>
@@ -56,15 +56,26 @@
 
     <script>
         var _window = $(window);
-        var tl = new TimelineMax({ repeat: -1 });
+        var tl = new TimelineLite();
 
         (function() {
-            tl.to($('img#heart'), 1, { scaleX: 1.5, scaleY: 1.5, onComplete: reverse });
+            tl.to($('img#heart'), 1, { scaleX: 1.5, scaleY: 1.5, ease: Power2.easeOut })
+              .to($('img#heart'), 1, { scaleX: 1.0, scaleY: 1.0, ease: Power2.easeOut,
+                  onComplete:
+                  (function() {
+                      tl.restart();
+                  })
+              });
         })();
 
         $('.icon-container').mouseover(function() {
-            TweenLite.to($(this), 0.75, { css:{ backgroundColor: #bdc3c7 } });
-            TweenLite.to($(this).children('img.icon'), 0.75, { css:{ top: 35% } });
+            TweenLite.to($(this), 0.75, { css:{ backgroundColor: '#bdc3c7' }, ease: Power2.easeOut });
+            TweenLite.to($(this).children('img.icon'), 0.75, { css:{ top: '35%' }, ease: Power2.easeOut });
+        });
+
+        $('.icon-container').mouseout(function() {
+            TweenLite.to($(this), 0.75, { css:{ backgroundColor: '#000000' }, ease: Power2.easeOut });
+            TweenLite.to($(this).children('img.icon'), 0.75, { css:{ top: '20%' }, ease: Power2.easeOut });
         });
 
         (function() {
