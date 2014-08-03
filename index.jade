@@ -10,12 +10,14 @@ html(lang='en')
         script(src='js/smooth-scroll.min.js')
         script(src='js/dragon.min.js')
     body
+        mixin image(source)
+            img(src=source, id=attributes.id)
         section#intro
             div
                 svg(xmlns='http://www.w3.org/2000/svg', id='fractal')
             p#name='Tarik Onalan'
             a.icon-container.scroll(href='#about')
-                img#icon(src='res/content/downarrow.svg')
+                +image.icon('res/content/downarrow.svg')
 
         section#about
             p(style='position: absolute; font-size: 45; left: 50%;')='About Me:'
@@ -23,13 +25,11 @@ html(lang='en')
 
         section#footer
             p(style='position: absolute; font-size: 30; left: 50%; top: 50%;')
-                img#code(src='res/github/github-code.svg')
+                +image#code('res/github/github-code.svg')
                 &nbsp;with&nbsp;
-                img#heart(src='res/github/github-heart.svg')
+                +image#heart('res/github/github-heart.svg')
                 &nbsp;by&nbsp;
                 a(href='//github.com/QuantumPhi')='Tarik Onalan'
-            mixin image(source)
-                img(src=source, id=attributes.id)
             +image#license('res/cc/cc.svg')
             +image#license('res/cc/by.svg')
             a(href='//github.com/QuantumPhi/quantumphi.github.io')
