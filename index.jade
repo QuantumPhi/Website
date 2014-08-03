@@ -1,9 +1,10 @@
 doctype html
+html(lang='en')
     head
         link(rel='stylesheet', href='//fonts.googleapis.com/css?family=Questrial')
         link(rel='stylesheet', href='style.css')
 
-        title=Tarik Onalan
+        title='Tarik Onalan'
 
         script(src='js/jquery-2.1.1.min.js')
         script(src='js/smooth-scroll.min.js')
@@ -12,12 +13,12 @@ doctype html
         section#intro
             div
                 svg(xmlns='http://www.w3.org/2000/svg', id='fractal')
-            p#name=Tarik Onalan
+            p#name='Tarik Onalan'
             a.icon-container.scroll(href='#about')
                 img#icon(src='res/content/downarrow.svg')
 
         section#about
-            p(style='position: absolute; font-size: 45; left: 50%;')=About Me:
+            p(style='position: absolute; font-size: 45; left: 50%;')='About Me:'
             p(style='position: relative; font-size: 37.5; left: 25%;')
 
         section#footer
@@ -25,8 +26,8 @@ doctype html
                 img#code(src='res/github/github-code.svg')
                 &nbsp;with&nbsp;
                 img#heart(src='res/github/github-heart.svg')
-                &nbsp;by
-                a(href='//github.com/QuantumPhi')=Tarik Onalan
+                &nbsp;by&nbsp;
+                a(href='//github.com/QuantumPhi')='Tarik Onalan'
             mixin image(source)
                 img(src=source, id=attributes.id)
             +image#license('res/cc/cc.svg')
