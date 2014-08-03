@@ -5,20 +5,9 @@
     <link href='style.css' rel='stylesheet'>
     <title>Tarik Onalan</title>
 
-    <script src='js/GSAP/TimelineLite.min.js'></script>
-    <script src='js/GSAP/TweenLite.min.js'></script>
-    <script src='js/GSAP/CSSPlugin.min.js'></script>
-    <script src='js/GSAP/ScrollToPlugin.min.js'></script>
-    <script src='js/GSAP/EasePack.min.js'></script>
     <script src='js/jquery-2.1.1.min.js'></script>
+    <script src='js/smooth-scroll.min.js'></script>
     <script src='js/dragon.min.js'></script>
-
-    <script>
-        window.onload = function() {
-            var name = $('p#name');
-            TweenLite.from(name, 1.5, { css:{ top: '41.5%' }, autoAlpha: 0, ease: Power2.easeOut });
-        }
-    </script>
 </head>
 <body>
     <section id='intro'>
@@ -26,7 +15,7 @@
            <svg xmlns='http://www.w3.org/2000/svg' id='fractal'></svg>
         </div>
         <p id='name'>Tarik Onalan</p>
-        <a href='#about' class='icon-container'>
+        <a href='#about' class='icon-container scroll'>
             <img src='res/content/downarrow.svg' class='icon'/>
         </a>
     </section>
@@ -56,7 +45,6 @@
 
     <script>
         var _window = $(window);
-        var tl = new TimelineLite();
 
         var setDimensions = (function() {
             var obj = $('.icon-container');
@@ -72,18 +60,6 @@
         });
         fractal();
 
-        (function() {
-            tl.to($('img#heart'), 1, { scaleX: 1.5, scaleY: 1.5, ease: Power2.easeOut })
-              .to($('img#heart'), 1, { scaleX: 1.0, scaleY: 1.0, ease: Power2.easeOut,
-                  onComplete:
-                  (function() {
-                      tl.restart();
-                  })
-              });
-        })();
-
-        console.log(2 / _window.width() + " " + 5 / _window.width());
-
         $('.icon-container').mouseover(function() {
             TweenLite.to($(this), 0.75, { css:{ backgroundColor: '#bdc3c7' }, ease: Power2.easeOut });
             TweenLite.to($(this).children('img.icon'), 0.75, { css:{ top: '35%' }, ease: Power2.easeOut });
@@ -94,12 +70,7 @@
             TweenLite.to($(this).children('img.icon'), 0.75, { css:{ top: '20%' }, ease: Power2.easeOut });
         });
 
-        $('.icon-container').click(function(event) {
-            event.preventDefault();
-            TweenLite.to(window, 0.5, { scrollTo:{ y: $($(this).attr('href')).offset().top }, ease: Power2.easeOut });
-        });
-
-        $(window).resize(function() {
+        _window.resize(function() {
             setDimensions();
             fractal();
         })
