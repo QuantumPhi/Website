@@ -11,13 +11,13 @@ html(lang='en')
         script(src='js/dragon.min.js')
     body
         mixin image(source)
-            img(src=source, id=attributes.id, class=attributes.class)
+            img(src!=source, id!=attributes.id, class!=attributes.class)
         section#intro
             div
                 svg(xmlns='http://www.w3.org/2000/svg', id='fractal')
             p#name='Tarik Onalan'
             a.icon-container.scroll(href='#about')
-                +image.icon('res/content/downarrow.svg')
+                +image('res/content/downarrow.svg')(class='icon')
 
         section#about
             p(style='position: absolute; font-size: 45; left: 50%;')='About Me:'
@@ -25,15 +25,15 @@ html(lang='en')
 
         section#footer
             p(style='position: absolute; font-size: 30; left: 50%; top: 50%;')
-                +image#code('res/github/github-code.svg')
+                +image('res/github/github-code.svg')(id='code')
                 &nbsp;with&nbsp;
-                +image#heart('res/github/github-heart.svg')
+                +image('res/github/github-heart.svg')(id='code')
                 &nbsp;by&nbsp;
                 a(href='//github.com/QuantumPhi')='Tarik Onalan'
-            +image#license('res/cc/cc.svg')
-            +image#license('res/cc/by.svg')
+            +image('res/cc/cc.svg')(id='license')
+            +image('res/cc/by.svg')(id='license')
             a(href='//github.com/QuantumPhi/quantumphi.github.io')
-                +image#github('res/github/github-icon.svg')
+                +image('res/github/github-icon.svg')(id='github')
         script.
             var _window = $(window);
 
