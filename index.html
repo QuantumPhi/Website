@@ -1,79 +1,48 @@
 <!DOCTYPE html>
-<html>
-<head>
-    <link href='//fonts.googleapis.com/css?family=Questrial' rel='stylesheet'>
-    <link href='style.css' rel='stylesheet'>
+<html lang="en">
+  <head>
+    <link rel="stylesheet" href="//fonts.googleapis.com/css?family=Questrial">
+    <link rel="stylesheet" href="style.css">
     <title>Tarik Onalan</title>
-
-    <script src='js/jquery-2.1.1.min.js'></script>
-    <script src='js/smooth-scroll.min.js'></script>
-    <script src='js/dragon.min.js'></script>
-</head>
-<body>
-    <section id='intro'>
-        <div>
-           <svg xmlns='http://www.w3.org/2000/svg' id='fractal'></svg>
-        </div>
-        <p id='name'>Tarik Onalan</p>
-        <a href='#about' class='icon-container scroll'>
-            <img src='res/content/downarrow.svg' class='icon'/>
-        </a>
+    <script src="js/jquery-2.1.1.min.js"></script>
+    <script src="js/smooth-scroll.min.js"></script>
+    <script src="js/dragon.min.js"></script>
+  </head>
+  <body>
+    <section id="intro">
+      <div>
+        <svg xmlns="http://www.w3.org/2000/svg" id="fractal"></svg>
+      </div>
+      <p id="name">Tarik Onalan</p><a href="#about" class="icon-container scroll"><img id="icon" src="res/content/downarrow.svg"></a>
     </section>
-
-    <section id='about'>
-        <p style='position: absolute; font-size: 45; left: 50%;'>About me:</p>
-        <p style='position: relative; font-size: 37.5; left: 25%;'>
-
-        </p>
+    <section id="about">
+      <p style="position: absolute; font-size: 45; left: 50%;">About Me:</p>
+      <p style="position: relative; font-size: 37.5; left: 25%;"></p>
     </section>
-
-    <section id='footer'>
-        <p style='position: absolute; font-size: 30; left: 50%; top: 50%;'>
-            <img src='res/github/github-code.svg' id='code'/>
-            &nbsp;with&nbsp;
-            <img src='res/github/github-heart.svg' id='heart'/>
-            &nbsp;by
-            <a href='//github.com/QuantumPhi'>Tarik Onalan</a>
-            <!-- <3 -->
-        </p>
-        <img src='res/cc/cc.svg' id='license'/>
-        <img src='res/cc/by.svg' id='license'/>
-        <a href='//github.com/QuantumPhi/quantumphi.github.io'>
-            <img src='res/github/github-icon.svg' id='github'/>
-        </a>
+    <section id="footer">
+      <p style="position: absolute; font-size: 30; left: 50%; top: 50%;"><img id="code" src="res/github/github-code.svg">&nbsp;with&nbsp;<img id="heart" src="res/github/github-heart.svg">&nbsp;by&nbsp;<a href="//github.com/QuantumPhi">Tarik Onalan</a></p><img id="license"><img id="license"><a href="//github.com/QuantumPhi/quantumphi.github.io"><img id="github"></a>
     </section>
-
     <script>
-        var _window = $(window);
-
-        var setDimensions = (function() {
-            var obj = $('.icon-container');
-            obj.height(_window.height() * 0.05);
-            obj.width(obj.height());
-            obj.css('border-width', _window.width() * 0.0037);
-        });
-        setDimensions();
-
-        var fractal = (function() {
-            $('svg#fractal').empty('path.dragon');
-            DRAGON.fractal('fractal', [_window.width() * 0.22,_window.height() / 2 + 90], [_window.width() * 0.78,_window.height() / 2 + 90], 12, false, 100);
-        });
-        fractal();
-
-        $('.icon-container').mouseover(function() {
-            TweenLite.to($(this), 0.75, { css:{ backgroundColor: '#bdc3c7' }, ease: Power2.easeOut });
-            TweenLite.to($(this).children('img.icon'), 0.75, { css:{ top: '35%' }, ease: Power2.easeOut });
-        });
-
-        $('.icon-container').mouseout(function() {
-            TweenLite.to($(this), 0.75, { css:{ backgroundColor: '#000000' }, ease: Power2.easeOut });
-            TweenLite.to($(this).children('img.icon'), 0.75, { css:{ top: '20%' }, ease: Power2.easeOut });
-        });
-
-        _window.resize(function() {
-            setDimensions();
-            fractal();
-        });
+      var _window = $(window);
+      
+      var setDimensions = (function() {
+          var obj = $('.icon-container');
+          obj.height(_window.height() * 0.05);
+          obj.width(obj.height());
+          obj.css('border-width', _window.width() * 0.0037);
+      });
+      setDimensions();
+      
+      var fractal = (function() {
+          $('svg#fractal').empty('path.dragon');
+          DRAGON.fractal('fractal', [_window.width() * 0.22,_window.height() / 2 + 90], [_window.width() * 0.78,_window.height() / 2 + 90], 12, false, 100);
+      });
+      fractal();
+      
+      _window.resize(function() {
+          setDimensions();
+          fractal();
+      });
     </script>
-</body>
+  </body>
 </html>
