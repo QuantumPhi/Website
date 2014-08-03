@@ -92,7 +92,7 @@ p#name {
     -o-transition: top 0.75s ease-out;
     transition: top 0.75s ease-out; }
   .icon-container:hover {
-    background-color: '#bdc3c7'; }
+    background-color: #bdc3c7; }
     .icon-container:hover img.icon, .icon-container:hover a.icon, .icon-container:hover img.icon#heart, .icon-container:hover img.icon#code, .icon-container:hover img.icon#data {
       top: 35%; }
 
