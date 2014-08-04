@@ -1,16 +1,6 @@
 doctype html
 html(lang='en')
     head
-        mixin if-ie(condition, showInNonIeBrowser)
-          - if(showInNonIeBrowser == null) showInNonIeBrowser = condition == "!IE";
-          != "<!--[if " + condition + "]>"
-          if showInNonIeBrowser
-            != "-->"
-          block
-          if showInNonIeBrowser
-            != "<!--"
-          != "<![endif]-->"
-
         link(rel='stylesheet', href='style.css')
 
         title='Tarik Onalan'
@@ -18,13 +8,9 @@ html(lang='en')
         script(src='js/jquery-2.1.1.min.js')
         script(src='js/smooth-scroll.min.js')
         script(src='js/dragon.min.js')
-
-        link(href='/stylesheets/screen.css', media='screen, projection', rel='stylesheet', type='text/css')
-        link(href='/stylesheets/print.css', media='screen, projection', rel='stylesheet', type='text/css')
-        +if-ie('IE') link(href='/stylesheets/ie.css', media='screen, projection', rel='stylesheet', type='text/css')
     body
         mixin image(source)
-            img(src!=source, id!=attributes.id, class!=attributes.class)
+            img(src=source, id!=attributes.id, class!=attributes.class)
         section#intro
             div
                 svg(xmlns='http://www.w3.org/2000/svg', id='fractal')
