@@ -155,46 +155,61 @@ a#data, img#data {
     top: 40%; } }
 @keyframes pulse {
   0% {
-    transform: scale(1); }
+    width: 100%;
+    height: auto; }
 
   50% {
-    transform: scale(1.5); }
+    width: 150%;
+    height: auto; }
 
   100% {
-    transform: scale(1); } }
+    width: 100%;
+    height: auto; } }
 @-webkit-keyframes pulse {
   0% {
-    -webkit-transform: scale(1); }
+    width: 100%;
+    height: auto; }
 
   50% {
-    -webkit-transform: scale(1.5); }
+    width: 150%;
+    height: auto; }
 
   100% {
-    -webkit-transform: scale(1); } }
+    width: 100%;
+    height: auto; } }
 @-moz-keyframes pulse {
   0% {
-    transform: scale(1); }
+    width: 100%;
+    height: auto; }
 
   50% {
-    transform: scale(1.5); }
+    width: 150%;
+    height: auto; }
 
   100% {
-    transform: scale(1); } }
+    width: 100%;
+    height: auto; } }
 @-ms-keyframes pulse {
   0% {
-    -ms-transform: scale(1); }
+    width: 100%;
+    height: auto; }
 
   50% {
-    -ms-transform: scale(1.5); }
+    width: 150%;
+    height: auto; }
 
   100% {
-    -ms-transform: scale(1); } }
+    width: 100%;
+    height: auto; } }
 @-o-keyframes pulse {
   0% {
-    transform: scale(1); }
+    width: 100%;
+    height: auto; }
 
   50% {
-    transform: scale(1.5); }
+    width: 150%;
+    height: auto; }
 
   100% {
-    transform: scale(1); } }
+    width: 100%;
+    height: auto; } }
