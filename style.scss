@@ -156,6 +156,8 @@ p#name
 img#heart
 {
     @extend img;
+    width: 4.75%;
+
     image-rendering: optimizeSpeed;
     -ms-interpolation-mode: nearest-neighbor;
 

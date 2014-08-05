@@ -97,6 +97,7 @@ p#name {
       top: 35%; }
 
 a#heart, img#heart {
+  width: 4.75%;
   image-rendering: optimizeSpeed;
   -ms-interpolation-mode: nearest-neighbor;
   -webkit-animation: pulse 2.5s infinite;
