@@ -4,7 +4,7 @@ html, body {
   margin: 0;
   padding: 0;
   height: 100%;
-  -webkit-font-smoothing: antialiased; }
+  -webkit-font-smoothing: subpixel-antialiased; }
 
 img, a, img#heart, img#code, img#data {
   position: relative;
