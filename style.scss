@@ -5,6 +5,7 @@
     @keyframes $animation-name  { @content; }
     @-webkit-keyframes $animation-name  { @content; }
     @-moz-keyframes $animation-name { @content; }
+    @-ms-keyframes $animation-name { @content; }
     @-o-keyframes $animation-name { @content; }
 }
 
@@ -161,11 +162,11 @@ img#heart
     image-rendering: optimizeSpeed;
     -ms-interpolation-mode: nearest-neighbor;
 
-    -webkit-animation: pulse 2.5s infinite;
-       -moz-animation: pulse 2.5s infinite;
-        -ms-animation: pulse 2.5s infinite;
-         -o-animation: pulse 2.5s infinite;
-            animation: pulse 2.5s infinite;
+    -webkit-animation: pulse 2s infinite;
+       -moz-animation: pulse 2s infinite;
+        -ms-animation: pulse 2s infinite;
+         -o-animation: pulse 2s infinite;
+            animation: pulse 2s infinite;
 }
 
 img#code

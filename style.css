@@ -100,11 +100,11 @@ a#heart, img#heart {
   width: 4.75%;
   image-rendering: optimizeSpeed;
   -ms-interpolation-mode: nearest-neighbor;
-  -webkit-animation: pulse 2.5s infinite;
-  -moz-animation: pulse 2.5s infinite;
-  -ms-animation: pulse 2.5s infinite;
-  -o-animation: pulse 2.5s infinite;
-  animation: pulse 2.5s infinite; }
+  -webkit-animation: pulse 2s infinite;
+  -moz-animation: pulse 2s infinite;
+  -ms-animation: pulse 2s infinite;
+  -o-animation: pulse 2s infinite;
+  animation: pulse 2s infinite; }
 
 a#code, img#code {
   width: 4.75%; }
@@ -131,6 +131,14 @@ a#data, img#data {
     opacity: 1;
     top: 40%; } }
 @-moz-keyframes fadein {
+  from {
+    opacity: 0;
+    top: 41.5%; }
+
+  to {
+    opacity: 1;
+    top: 40%; } }
+@-ms-keyframes fadein {
   from {
     opacity: 0;
     top: 41.5%; }
@@ -177,6 +185,21 @@ a#data, img#data {
     -ms-transform: scale(1);
     transform: scale(1); } }
 @-moz-keyframes pulse {
+  0% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1); }
+
+  50% {
+    -webkit-transform: scale(1.5);
+    -ms-transform: scale(1.5);
+    transform: scale(1.5); }
+
+  100% {
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    transform: scale(1); } }
+@-ms-keyframes pulse {
   0% {
     -webkit-transform: scale(1);
     -ms-transform: scale(1);
