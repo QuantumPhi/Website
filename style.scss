@@ -1,144 +1,18 @@
----
----
-
-@import 'animation';
-@import url('//fonts.googleapis.com/css?family=Questrial');
+@import url('http://fonts.googleapis.com/css?family=Raleway');
 
 html, body
 {
-    font-family: 'Questrial';
-    margin: 0;
+    font-family:'Raleway'
+
     padding: 0;
+    margin: 0;
+
     height: 100%;
 
     -webkit-font-smoothing: subpixel-antialiased;
 }
 
-img
+.static
 {
-    position: relative;
-    border: none;
-}
-
-a
-{
-    @extend img;
-    text-decoration: none;
-    color: #000000;
-}
-
-p
-{
-    @include transform(translate(-50%, -50%));
-}
-
-section
-{
-    position: relative;
-    overflow: hidden;
-    width: 100%;
-    height: 100%;
-    text-align: center;
-}
-
-section#intro
-{
-    @extend section;
-    background-color: #000000;
-    font-size: 60px;
-}
-
-section#about
-{
-    @extend section;
-    background-color: #95a5a6;
-    font-size: 45px;
-}
-
-section#footer
-{
-    @extend section;
-    background-color: #ecf0f1;
-    font-size: 30px;
-}
-
-p#name
-{
-    @extend p;
-    position: absolute;
-    color: #ecf0f1;
-    left: 50%;
-    top: 40%;
-
-    -webkit-backface-visibility: hidden;
-
-    @include animation(fade-in 1.5s);
-}
-
-.icon-container
-{
-    position: absolute;
-    text-align: center;
-    border: 5px solid rgba(149, 165, 166, 0.5);
-    border-radius: 50%;
-    background-color: #000000;
-    width: 10px;
-    height: 10px;
-    left: 50%;
-    top: 90%;
-
-    @include transition(background-color 0.75s ease-out);
-
-    img.icon
-    {
-        position: absolute;
-        width: 60%;
-        height: 60%;
-        left: 50%;
-        top: 20%;
-
-        @include transform(translateX(-50%));
-
-        image-rendering: optimizeQuality;
-        -ms-interpolation-mode: bicubic;
-
-        -webkit-backface-visibility: hidden;
-
-        @include transition(top 0.75s ease-out);
-    }
-
-    &:hover
-    {
-        background-color: #bdc3c7;
-
-        img.icon
-        {
-            top: 35%;
-        }
-    }
-}
-
-img#heart
-{
-    @extend img;
-    width: 4.75%;
-
-    image-rendering: optimizeSpeed;
-    -ms-interpolation-mode: nearest-neighbor;
-
-    @include animation(pulse 2s infinite);
-}
-
-img#code
-{
-    @extend img;
-    width: 4.75%;
-}
-
-img#data
-{
-    @extend img;
-    width: 1.5%;
-    left: -47%;
-    top: 94.5%;
+    position: fixed;
 }
