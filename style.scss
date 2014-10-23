@@ -30,9 +30,17 @@ html, body
     }
 }
 
-p#title
+p
 {
     position:relative;
-    
+}
+
+p#title
+{
     font-size:70px;
+}
+
+p#info
+{
+    font-size:35px;
 }
