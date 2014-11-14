@@ -1,11 +1,11 @@
 ---
 ---
 
-@import url('//fonts.googleapis.com/css?family=Muli');
+@import url('//fonts.googleapis.com/css?family=Varela+Round');
 
 html, body
 {
-    font-family:'Muli';
+    font-family:'Varela Round';
 
     padding:0;
     margin:0;
@@ -15,32 +15,22 @@ html, body
     -webkit-font-smoothing:subpixel-antialiased;
 }
 
-.parallax
+#content
 {
-    position:relative;
+    position: relative;
 
-    height:100%;
-    z-index:-1;
-    .static
+    height: 100%;
+    width: 100%;
+
+    text-align: center;
+
+    span.name
     {
-        position:fixed;
+        position: relative;
 
-        height:100%;
-        width:100%;
+        margin: auto;
+        top: 40%;
+
+        font-size: 80px;
     }
-}
-
-p
-{
-    position:relative;
-}
-
-p#title
-{
-    font-size:70px;
-}
-
-p#info
-{
-    font-size:35px;
 }
