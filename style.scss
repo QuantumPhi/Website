@@ -1,11 +1,11 @@
 ---
 ---
 
-@import url('//fonts.googleapis.com/css?family=Varela+Round');
+@import url('//fonts.googleapis.com/css?family=Questrial');
 
 html, body
 {
-    font-family:'Varela Round';
+    font-family:'Questrial';
 
     padding:0;
     margin:0;
@@ -24,6 +24,8 @@ html, body
 
     text-align: center;
 
+    background: #cbcbcb;
+
     span.name
     {
         position: relative;
@@ -32,5 +34,6 @@ html, body
         top: 40%;
 
         font-size: 80px;
+        color: #434343;
     }
 }
