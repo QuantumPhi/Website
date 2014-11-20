@@ -1,6 +1,9 @@
 <!DOCTYPE html><html lang="en"></html><head><title>Tarik Onalan</title><link href="style.css" rel="stylesheet"><script src="js/jquery-1.11.1.min.js"></script><script src="js/d3.min.js"></script></head><body><script>var width  = $(window).width()
     height = $(window).height()
-    
-console.log($.getJSON("res/colors.json"))
 
-var color = $.getJSON("res/colors.json")</script></body><div id="content"><span class="name">Tarik Onalan</span></div>
+$.getJSON('res/colors.json', function(colors) {
+    console.log('WOO, COLORS!')
+    $.each(colors, function(key, val) {
+        console.log(key + " " + val)
+    })
+})</script></body><div id="content"><span class="name">Tarik Onalan</span></div>

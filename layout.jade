@@ -12,7 +12,10 @@ body
     script.
         var width  = $(window).width()
             height = $(window).height()
-            
-        console.log($.getJSON('res/colors.json'))
         
-        var color = $.getJSON('res/colors.json')
+        $.getJSON('res/colors.json', function(colors) {
+            console.log('WOO, COLORS!')
+            $.each(colors, function(key, val) {
+                console.log(key + " " + val)
+            })
+        })
