@@ -1,0 +1,13 @@
+{
+  "name": "Tarik Onalan",
+  "version": "0.0.0",
+  "homepage": "https://quantumphi.github.io",
+  "main": [
+    "js/index.js"
+  ],
+  "dependencies": {
+      "d3": "^3.4.13",
+      "jquery": "^1.11.0",
+      "require": "*"
+  }
+}
