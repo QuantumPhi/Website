@@ -2,9 +2,14 @@ module.exports = function(grunt) {
     grunt.initConfig({
         pkg: grunt.file.readJSON("package.json"),
 
+        clean: ["*.html", "dist/*"],
+
         concat: {
             options: {
-                stripBanners: true
+                stripBanners: {
+                    block: true,
+                    line: true
+                }
             },
             dist: {
                 src: [
@@ -24,18 +29,10 @@ module.exports = function(grunt) {
             }
         },
 
-        shell: {
-            "clean": {
-                command: [
-                    "rm dist/* *.html",
-                ].join(" && ")
-            }
-        },
-
         uglify: {
             dist: {
-                src: "<%= concat.dist.dest %>",
-                dest: "<%= concat.dist.dest %>"
+                src: "js/index.js",
+                dest: "dist/index.js"
             }
         },
 
@@ -52,12 +49,11 @@ module.exports = function(grunt) {
         }
     })
 
+    grunt.loadNpmTasks("grunt-contrib-clean")
     grunt.loadNpmTasks("grunt-contrib-concat")
     grunt.loadNpmTasks("grunt-contrib-jade")
     grunt.loadNpmTasks("grunt-contrib-uglify")
     grunt.loadNpmTasks("grunt-contrib-watch")
-    grunt.loadNpmTasks("grunt-shell")
 
     grunt.registerTask("default", ["concat", "jade", "uglify"])
-    grunt.registerTask("clean", ["shell:clean"])
 }
