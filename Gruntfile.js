@@ -19,8 +19,17 @@ module.exports = function(grunt) {
         jade: {
             compile: {
                 files: {
-                    "index.html" : "templates/index.jade"
+                    "index.html" : ["templates/index.jade", "templates/index.layout.jade"]
                 }
+            }
+        },
+
+        shell: {
+            "clean": {
+                command: [
+                    "rm dist/*",
+                    "rm *.html"
+                ].join(" && ")
             }
         },
 
@@ -48,6 +57,8 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks("grunt-contrib-jade")
     grunt.loadNpmTasks("grunt-contrib-uglify")
     grunt.loadNpmTasks("grunt-contrib-watch")
+    grunt.loadNpmTasks("grunt-shell")
 
     grunt.registerTask("default", ["concat", "jade", "uglify"])
+    grunt.registerTask("clean", ["shell:clean"])
 }
