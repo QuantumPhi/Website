@@ -21,11 +21,6 @@ module.exports = function(grunt) {
                 src: 'js/index.js',
                 dest: 'dist/index.min.js'
             },
-
-            libs: {
-                src: 'bower_components/requirejs/require.js',
-                dest: 'dist/require.min.js'
-            }
         },
 
         watch: {
