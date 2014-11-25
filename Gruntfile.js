@@ -4,20 +4,16 @@ module.exports = function(grunt) {
 
         clean: ["*.html", "dist/*"],
 
-        concat: {
-            options: {
-                stripBanners: {
-                    block: true,
-                    line: true
-                }
-            },
-            dist: {
+        copy: {
+            main: {
+                expand: true,
+                flatten: true,
                 src: [
                     "bower_components/d3/d3.min.js",
                     "bower_components/jquery/dist/jquery.min.js",
                     "bower_components/require/build/require.min.js"
                 ],
-                dest: "dist/libs.js"
+                dest: "dist/"
             }
         },
 
@@ -50,10 +46,10 @@ module.exports = function(grunt) {
     })
 
     grunt.loadNpmTasks("grunt-contrib-clean")
-    grunt.loadNpmTasks("grunt-contrib-concat")
+    grunt.loadNpmTasks("grunt-contrib-copy")
     grunt.loadNpmTasks("grunt-contrib-jade")
     grunt.loadNpmTasks("grunt-contrib-uglify")
     grunt.loadNpmTasks("grunt-contrib-watch")
 
-    grunt.registerTask("default", ["concat", "jade", "uglify"])
+    grunt.registerTask("default", ["copy", "jade", "uglify"])
 }
