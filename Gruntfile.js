@@ -1,51 +1,50 @@
 module.exports = function(grunt) {
     grunt.initConfig({
-        pkg: grunt.file.readJSON("package.json"),
+        pkg: grunt.file.readJSON('package.json'),
 
-        clean: ["*.html", "dist/*"],
-
-        copy: {
-            main: {
-                expand: true,
-                flatten: true,
-                src: ["bower_components/require/build/require.min.js"],
-                dest: "dist/"
-            }
-        },
+        clean: ['*.html', 'dist/*'],
 
         jade: {
-            compile: {
+            index: {
                 files: {
-                    "index.html" : ["templates/index.jade"]
+                    'index.html' : ['templates/index.jade']
                 }
             }
         },
 
         uglify: {
-            dist: {
-                src: "js/index.js",
-                dest: "dist/index.min.js"
+            options: {
+                preserveComments: false
+            },
+
+            main: {
+                src: 'js/index.js',
+                dest: 'dist/index.min.js'
+            },
+
+            libs: {
+                src: 'bower_components/requirejs/require.js',
+                dest: 'dist/require.min.js'
             }
         },
 
         watch: {
             html: {
-                files: ["templates/*.jade", "templates/*.layout.jade"],
-                tasks: ["jade"]
+                files: ['templates/*.jade', 'templates/*.layout.jade'],
+                tasks: ['jade']
             },
 
             scripts: {
-                files: ["js/index.js"],
-                tasks: ["uglify"]
+                files: ['js/index.js'],
+                tasks: ['uglify:main']
             }
         }
     })
 
-    grunt.loadNpmTasks("grunt-contrib-clean")
-    grunt.loadNpmTasks("grunt-contrib-copy")
-    grunt.loadNpmTasks("grunt-contrib-jade")
-    grunt.loadNpmTasks("grunt-contrib-uglify")
-    grunt.loadNpmTasks("grunt-contrib-watch")
+    grunt.loadNpmTasks('grunt-contrib-clean')
+    grunt.loadNpmTasks('grunt-contrib-jade')
+    grunt.loadNpmTasks('grunt-contrib-uglify')
+    grunt.loadNpmTasks('grunt-contrib-watch')
 
-    grunt.registerTask("default", ["copy", "jade", "uglify"])
+    grunt.registerTask('default', ['jade', 'uglify'])
 }

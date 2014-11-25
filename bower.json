@@ -1,8 +1,8 @@
 {
-    "name": "Tarik Onalan",
-    "version": "0.0.0",
-    "homepage": "https://quantumphi.github.io",
-    "dependencies": {
-        "require": "*"
-    }
+  "name": "Tarik Onalan",
+  "version": "0.0.0",
+  "homepage": "https://quantumphi.github.io",
+  "dependencies": {
+    "requirejs": "^2.1.15"
+  }
 }
