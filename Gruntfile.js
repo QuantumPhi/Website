@@ -12,7 +12,7 @@ module.exports = function(grunt) {
                     "bower_components/jquery/dist/jquery.min.js",
                     "bower_components/require/build/require.min.js"
                 ],
-                dest: "js/libs.js"
+                dest: "dist/libs.js"
             }
         },
 
@@ -27,8 +27,7 @@ module.exports = function(grunt) {
         shell: {
             "clean": {
                 command: [
-                    "rm dist/*",
-                    "rm *.html"
+                    "rm dist/* *.html",
                 ].join(" && ")
             }
         },
