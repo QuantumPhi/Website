@@ -8,11 +8,7 @@ module.exports = function(grunt) {
             main: {
                 expand: true,
                 flatten: true,
-                src: [
-                    "bower_components/d3/d3.min.js",
-                    "bower_components/jquery/dist/jquery.min.js",
-                    "bower_components/require/build/require.min.js"
-                ],
+                src: ["bower_components/require/build/require.min.js"],
                 dest: "dist/"
             }
         },
@@ -20,7 +16,7 @@ module.exports = function(grunt) {
         jade: {
             compile: {
                 files: {
-                    "index.html" : ["templates/index.jade", "templates/index.layout.jade"]
+                    "index.html" : ["templates/index.jade"]
                 }
             }
         },
@@ -28,19 +24,19 @@ module.exports = function(grunt) {
         uglify: {
             dist: {
                 src: "js/index.js",
-                dest: "dist/index.js"
+                dest: "dist/index.min.js"
             }
         },
 
         watch: {
             html: {
-                files: ["*.jade", "*.layout.jade"],
+                files: ["templates/*.jade", "templates/*.layout.jade"],
                 tasks: ["jade"]
             },
 
             scripts: {
-                files: ["bower_components/**/*.min.js"],
-                tasks: ["concat", "uglify"]
+                files: ["js/index.js"],
+                tasks: ["uglify"]
             }
         }
     })

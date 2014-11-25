@@ -1,1 +1,0 @@
-require.config({baseUrl:"lib/"}),require(["jquery-1.11.1.min.js","d3.min.js"],function(a){a(window).width();height=a(window).height()});

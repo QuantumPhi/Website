@@ -1,8 +1,8 @@
 require.config({
-    baseUrl: "lib/"
+    baseUrl: './'
 })
 
-require(["jquery-1.11.1.min.js", "d3.min.js"], function($, d3) {
+require(['jquery', 'd3'], function($, d3) {
     var width  = $(window).width()
         height = $(window).height()
 })
