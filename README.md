@@ -1,8 +1,6 @@
-Personal Website
+Website
 ================
-[WEBSITE](http://quantumphi.github.io)
-
-Welcome to the README. Not much to see here.
+[WEBSITE](https://quantumphi.github.io)
 
 * [Code License](CODE-LICENSE)
 * [Art License](ART-LICENSE)

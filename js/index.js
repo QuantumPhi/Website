@@ -8,7 +8,11 @@ require.config({
     }
 })
 
-require(['jquery', 'd3', 'json!../res/colors.json'], function($, d3, colors) {
+require(['jquery', 'd3'], function($, d3, colors) {
     var width  = $(window).width(),
         height = $(window).height()
+
+    $.when(
+        $.get('https://cdn.rawgit.com/doda/github-language-colors/master/colors.json')
+    )
 })
