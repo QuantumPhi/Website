@@ -12,6 +12,18 @@ module.exports = function(grunt) {
             }
         },
 
+        shell: {
+            'gh-pages': {
+                command: [
+                    'git checkout gh-pages',
+                    'git rebase master',
+                    'grunt',
+                    'git push origin gh-pages',
+                    'git checkout master'
+                ].join(' && ')
+            }
+        },
+
         uglify: {
             options: {
                 preserveComments: false
@@ -49,6 +61,8 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-jade')
     grunt.loadNpmTasks('grunt-contrib-uglify')
     grunt.loadNpmTasks('grunt-contrib-watch')
+    grunt.loadNpmTasks('grunt-shell')
 
     grunt.registerTask('default', ['jade', 'uglify'])
+    grunt.registerTask('gh-pages', ['shell:gh-pages'])
 }
