@@ -1,4 +1,6 @@
 module.exports = function(grunt) {
+    require('load-grunt-tasks')(grunt)
+
     grunt.initConfig({
         pkg: grunt.file.readJSON('package.json'),
 
@@ -67,12 +69,6 @@ module.exports = function(grunt) {
             }
         }
     })
-
-    grunt.loadNpmTasks('grunt-contrib-clean')
-    grunt.loadNpmTasks('grunt-contrib-jade')
-    grunt.loadNpmTasks('grunt-contrib-uglify')
-    grunt.loadNpmTasks('grunt-contrib-watch')
-    grunt.loadNpmTasks('grunt-shell')
 
     grunt.registerTask('default', ['jade', 'uglify'])
     grunt.registerTask('gh-pages', ['shell:gh-pages'])
