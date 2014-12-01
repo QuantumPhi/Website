@@ -18,6 +18,8 @@ module.exports = function(grunt) {
                     'git checkout gh-pages',
                     'git rebase master',
                     'grunt',
+                    'git add -A',
+                    'git commit -m \"grunt:gh-pages\"',
                     'git push origin gh-pages',
                     'git checkout master'
                 ].join(' && ')
