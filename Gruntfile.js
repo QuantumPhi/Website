@@ -18,13 +18,17 @@ module.exports = function(grunt) {
             'gh-pages': {
                 command: [
                     'git checkout gh-pages',
-                    'git reset --hard origin/master',
+                    'git rebase master',
                     'grunt',
                     'git add -A',
                     'git commit -m \"grunt:gh-pages\"',
-                    'git push -f origin gh-pages',
+                    'git push origin gh-pages',
                     'git checkout master'
-                ].join(' && ')
+                ].join(' && '),
+
+                options: {
+                    failOnError: false
+                }
             },
 
             'serve': {
