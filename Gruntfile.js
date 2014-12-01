@@ -21,6 +21,15 @@ module.exports = function(grunt) {
                     'git push origin gh-pages',
                     'git checkout master'
                 ].join(' && ')
+            },
+
+            'serve': {
+                command: [
+                    'git checkout gh-pages',
+                    'git rebase master',
+                    'grunt',
+                    'jekyll serve'
+                ].join(' && ')
             }
         },
 
@@ -63,6 +72,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-watch')
     grunt.loadNpmTasks('grunt-shell')
 
-    grunt.registerTask('default', ['jade', 'uglify'])
+    grunt.registerTask('default' , ['jade', 'uglify'])
     grunt.registerTask('gh-pages', ['shell:gh-pages'])
+    grunt.registerTask('serve'   , ['shell:serve'])
 }
