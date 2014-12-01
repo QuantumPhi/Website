@@ -74,7 +74,7 @@ module.exports = function(grunt) {
     grunt.loadNpmTasks('grunt-contrib-watch')
     grunt.loadNpmTasks('grunt-shell')
 
-    grunt.registerTask('default' , ['jade', 'uglify'])
+    grunt.registerTask('default', ['jade', 'uglify'])
     grunt.registerTask('gh-pages', ['shell:gh-pages'])
-    grunt.registerTask('serve'   , ['shell:serve'])
+    grunt.registerTask('serve', ['shell:serve'])
 }
