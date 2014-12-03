@@ -15,26 +15,8 @@ module.exports = function(grunt) {
         },
 
         shell: {
-            'gh-pages': {
-                command: [
-                    'git checkout gh-pages',
-                    'git rebase master',
-                    'grunt',
-                    'git add -A',
-                    'git commit -m \"grunt:gh-pages\"',
-                    'git push origin gh-pages',
-                    'git checkout master'
-                ].join(' && '),
-
-                options: {
-                    failOnError: false
-                }
-            },
-
             'serve': {
                 command: [
-                    'git checkout gh-pages',
-                    'git rebase master',
                     'grunt',
                     'jekyll serve'
                 ].join(' && ')
@@ -75,6 +57,5 @@ module.exports = function(grunt) {
     })
 
     grunt.registerTask('default', ['jade', 'uglify'])
-    grunt.registerTask('gh-pages', ['shell:gh-pages'])
     grunt.registerTask('serve', ['shell:serve'])
 }
