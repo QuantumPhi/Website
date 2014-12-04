@@ -38,3 +38,13 @@ html, body
         opacity: 50%;
     }
 }
+
+.node {
+    stroke: #fff;
+    stroke-width: 1.5px;
+}
+
+.link {
+    fill: none;
+    stroke: #bbb;
+}
