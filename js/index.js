@@ -10,7 +10,7 @@ require.config({
     }
 })
 
-require(['jquery', 'd3', 'colors'], function($, d3, colors) {
+require(['jquery', 'd3'], function($, d3) {
     var width  = $(window).width(),
         height = $(window).height()
 
