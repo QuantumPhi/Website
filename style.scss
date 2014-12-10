@@ -37,14 +37,31 @@ html, body
         color: #868686;
         opacity: 50%;
     }
-}
 
-.node {
-    stroke: #fff;
-    stroke-width: 1.5px;
-}
+    svg
+    {
+        position: absolute;
+        left: 0%;
 
-.link {
-    fill: none;
-    stroke: #bbb;
+        circle
+        {
+            r: 0;
+        }
+
+        .node {
+            stroke: #fff;
+            stroke-width: 1.5px;
+
+            -webkit-transition: 1.0s ease-out;
+               -moz-transition: 1.0s ease-out;
+                -ms-transition: 1.0s ease-out;
+                 -o-transition: 1.0s ease-out;
+                    transition: 1.0s ease-out;
+        }
+
+        .link {
+            fill: none;
+            stroke: #bbb;
+        }
+    }
 }

@@ -34,7 +34,10 @@ module.exports = function(grunt) {
             },
 
             libs: {
-                files: grunt.file.expandMapping(['bower_components/**/*.js'], 'dist/', {
+                files: grunt.file.expandMapping([
+                        'bower_components/**/*.js',
+                        'js/libs/*.js'
+                    ], 'dist/', {
                     flatten: true,
                     rename: function(destBase, destPath) {
                         return destBase + destPath.replace('.js', '.min.js')
