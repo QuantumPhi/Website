@@ -10,14 +10,16 @@ require.config({
     }
 })
 
-require(['jquery', 'd3'], function($, d3) {
+require(['jquery', 'd3', 'colors', 'repos'], function($, d3) {
     var width  = $(window).width(),
-        height = $(window).height()
+        height = $(window).height(),
+        colors = require('colors').responseJSON,
+        repos = require('repos').responseJSON
 
     var color = function(language) {
-            if(language === null)
+            if(language == null)
                 return [76, '#2c3e50']
-            return colors[language]
+            return colors[language].color
         },
         force = d3.layout.force()
             .charge(-240)
@@ -38,8 +40,8 @@ require(['jquery', 'd3'], function($, d3) {
         $.each(repos, function(key, value) {
             array.push({
                 'index': key + 1,
-                'color': color(value['language'])[1],
-                'group': color(value['language'])[0],
+                'color': color(value['language']),
+                'group': color(value['language']),
                 'name': value['name']
             })
         })
@@ -65,7 +67,7 @@ require(['jquery', 'd3'], function($, d3) {
             .data(nodes)
         .enter().append('circle')
             .attr('class', 'node')
-            .style('r', 10)
+            .attr('r', 10)
             .style('fill', function(d) { return d.color })
             .call(force.drag)
 

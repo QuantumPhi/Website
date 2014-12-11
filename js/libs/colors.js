@@ -1,6 +1,8 @@
-define(['jquery'], function() {
-    return $.getJSON('//cdn.rawgit.com/doda/github-language-colors/master/colors.json',
-            function(data) {
-        return data
+define(['jquery'], function($) {
+    return $.ajax({
+        url: 'https://cdn.rawgit.com/ozh/github-colors/master/colors.json',
+        cache: true,
+        async: false,
+        success: function(data) { return data }
     })
 })
