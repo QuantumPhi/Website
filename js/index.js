@@ -22,7 +22,7 @@ require(['jquery', 'd3', 'colors', 'repos'], function($, d3) {
             return colors[language].color
         },
         force = d3.layout.force()
-            .charge(-240)
+            .charge(-300)
             .linkDistance(100)
             .size([width, height]),
         svg = d3.select('#content')
@@ -35,14 +35,16 @@ require(['jquery', 'd3', 'colors', 'repos'], function($, d3) {
             'index': 0,
             'color': '#000',
             'group': -1,
-            'name': 'ME!'
+            'name': 'ME!',
+            'url': 'https://github.com/QuantumPhi'
         }]
         $.each(repos, function(key, value) {
             array.push({
                 'index': key + 1,
                 'color': color(value['language']),
                 'group': color(value['language']),
-                'name': value['name']
+                'name': value['name'],
+                'url': value['html_url']
             })
         })
         return array
@@ -65,14 +67,25 @@ require(['jquery', 'd3', 'colors', 'repos'], function($, d3) {
 
     var node = svg.selectAll('.node')
             .data(nodes)
-        .enter().append('circle')
-            .attr('class', 'node')
-            .attr('r', 10)
-            .style('fill', function(d) { return d.color })
-            .call(force.drag)
-
-    node.append('title')
-        .text(function(d) { return d.name })
+        .enter()
+            .append('circle')
+                .attr('class', 'node')
+                .attr('r', 10)
+                .style('fill', function(d) { return d.color })
+                //.on('click', function(d) { window.open(d.url) }) <- Allow movement of graph
+                .on('mouseover', function(d) {
+                    d3.select(this)
+                        .transition()
+                        .duration(500)
+                        .attr('r', 25)
+                })
+                .on('mouseout', function(d) {
+                    d3.select(this)
+                        .transition()
+                        .duration(500)
+                        .attr('r', 10)
+                })
+                .call(force.drag)
 
     force.on('tick', function() {
         node.attr('cx', function(d) { return d.x })
