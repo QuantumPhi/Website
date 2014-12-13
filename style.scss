@@ -38,6 +38,17 @@ html, body
         opacity: 50%;
     }
 
+    img.icon
+    {
+        position: absolute;
+
+        bottom: 5%;
+        left: 2.5%;
+
+        width: 5%;
+        height: auto;
+    }
+
     svg
     {
         position: absolute;
