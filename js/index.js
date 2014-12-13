@@ -6,12 +6,11 @@ require.config({
         repos: 'repos.min',
 
         d3: '//cdnjs.cloudflare.com/ajax/libs/d3/3.4.13/d3.min',
-        d3tip: '//cdnjs.cloudflare.com/ajax/libs/d3-tip/0.6.3/d3-tip.min',
         jquery: '//code.jquery.com/jquery-1.11.0.min'
     }
 })
 
-require(['jquery', 'd3', 'd3tip', 'colors', 'repos'], function($, d3, tip) {
+require(['jquery', 'd3', 'colors', 'repos'], function($, d3) {
     var width  = $(window).width(),
         height = $(window).height(),
         colors = require('colors').responseJSON,
@@ -128,6 +127,7 @@ require(['jquery', 'd3', 'd3tip', 'colors', 'repos'], function($, d3, tip) {
                         .duration(500)
                         .attr('r', d.radius)
                 })
+                .on('dblclick', function(d) { if(d.url) window.open(d.url) })
                 .call(force.drag)
 
     node.append('title')
