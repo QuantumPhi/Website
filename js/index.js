@@ -127,7 +127,6 @@ require(['jquery', 'd3', 'colors', 'repos'], function($, d3) {
                         .duration(500)
                         .attr('r', d.radius)
                 })
-                .on('dblclick', function(d) { if(d.url) window.open(d.url) })
                 .call(force.drag)
 
     node.append('title')
