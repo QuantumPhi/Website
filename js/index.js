@@ -23,7 +23,7 @@ require(['jquery', 'd3', 'colors', 'repos'], function($, d3) {
         },
         force = d3.layout.force()
             .charge(-250)
-            .linkDistance(Math.min(width, height) / 20)
+            .linkDistance(100)
             .size([width, height]),
         svg = d3.select('#content')
             .append('svg')
