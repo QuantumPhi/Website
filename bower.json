@@ -1,9 +1,0 @@
-{
-  "name": "Tarik Onalan",
-  "version": "0.0.0",
-  "homepage": "https://quantumphi.github.io",
-  "dependencies": {
-    "requirejs": "^2.1.15",
-    "requirejs-json": "^0.0.3"
-  }
-}

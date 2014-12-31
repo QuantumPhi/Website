@@ -1,7 +1,5 @@
 require.config({
     paths: {
-        text: 'text.min',
-        json: 'json.min',
         colors: 'colors.min',
         repos: 'repos.min',
 
