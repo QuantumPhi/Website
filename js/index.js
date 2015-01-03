@@ -2,7 +2,7 @@ var $  = require('jquery'),
     d3 = require('d3')
 
 var width  = $(window).width(),
-    height = $(window).height(),
+    height = $(window).height()
 
 var color = function(language) {
         if(!language || !colors[language])
