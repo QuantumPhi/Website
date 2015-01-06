@@ -20,23 +20,23 @@ gulp.task('jade', function() {
         .pipe(gulp.dest('.'))
 })
 
+gulp.task('scripts:bundle', function() {
+    return browserify()
+    .require('jquery')
+    .require('d3')
+    .bundle()
+    .pipe(source('bundle.js'))
+    .pipe(buffer())
+    .pipe(uglify())
+    .pipe(gulp.dest('dist'))
+})
+
 gulp.task('scripts:index', function() {
     return browserify('./js/index.js')
         .external('jquery')
         .external('d3')
         .bundle()
         .pipe(source('index.js'))
-        .pipe(buffer())
-        .pipe(uglify())
-        .pipe(gulp.dest('dist'))
-})
-
-gulp.task('scripts:bundle', function() {
-    return browserify()
-        .require('jquery')
-        .require('d3')
-        .bundle()
-        .pipe(source('bundle.js'))
         .pipe(buffer())
         .pipe(uglify())
         .pipe(gulp.dest('dist'))
