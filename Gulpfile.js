@@ -47,5 +47,5 @@ gulp.task('watch', function() {
     gulp.watch('jade/index.jade', ['jade'])
 })
 
-gulp.task('default', ['scripts:index', 'scripts:bundle'])
+gulp.task('default', ['scripts:index', 'jade'])
 gulp.task('install', ['scripts:index', 'scripts:bundle', 'jade'])
