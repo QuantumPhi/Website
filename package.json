@@ -11,6 +11,9 @@
     "url": "https://github.com/QuantumPhi/quantumphi.github.io/issues"
   },
   "homepage": "https://quantumphi.github.io",
+  "scripts": {
+      "postinstall": "gulp install"
+  },
   "dependencies": {
     "d3": "^3.5.3",
     "jquery": "^1.11.1"
@@ -24,8 +27,5 @@
     "gulp-uglify": "^1.0.2",
     "vinyl-buffer": "^1.0.0",
     "vinyl-source-stream": "^1.0.0"
-  },
-  "scripts": {
-    "postinstall": "gulp install"
   }
 }
