@@ -12,7 +12,7 @@
   },
   "homepage": "https://quantumphi.github.io",
   "scripts": {
-      "postinstall": "gulp install"
+    "postinstall": "gulp install"
   },
   "dependencies": {
     "d3": "^3.5.3",
