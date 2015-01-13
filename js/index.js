@@ -1,5 +1,5 @@
 var $      = require('jquery'),
-    // colors = require('./js/colors.json'),
+    colors = require('./js/colors.json'),
     d3     = require('d3')
 
 var width  = $(window).width(),
@@ -8,15 +8,14 @@ var width  = $(window).width(),
 var repos  = $.ajax({
     url: 'https://api.github.com/users/QuantumPhi/repos?type=all&per_page=100',
     cache: true,
-    async: false,
-    success: function(data) { return data }
+    async: false
 })
 
 var color = function(language) {
         if(!language || !colors[language])
             return '#717171'
-            return colors[language].color
-        },
+        return colors[language].color
+    },
     force = d3.layout.force()
         .charge(-250)
         .linkDistance(100)
