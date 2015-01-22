@@ -1,6 +1,10 @@
 exclude: [
-    node_modules,
-    js,
-    jade,
+    .git/,
+    node_modules/,
+    jade/,
+    js/,
+    .gitignore,
+    LICENSE,
+    Gulpfile.js,
     package.json
 ]
